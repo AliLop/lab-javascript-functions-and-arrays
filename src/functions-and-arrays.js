@@ -124,11 +124,14 @@ console.log(wordSearch);
 // Iteration #7: Count repetition
 function howManyTimes(array, value) {
   let wordCount = 0;
+  if(array.length === 0){
+    wordCount = 0;
+  }
   for(i=0; i < array.length;i++){
-    if(array[i] == value){
+    if(array[i] === value){
       wordCount++
     }
-  }
+  } 
     return wordCount
 }; 
 
