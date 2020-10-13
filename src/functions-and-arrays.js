@@ -1,3 +1,4 @@
+
 // Iteration #1: Find the maximum
 function maxOfTwoNumbers (numberOne, numberTwo) {
   if (numberOne > numberTwo) {
@@ -53,7 +54,7 @@ function averageNumbers(array) {
     return sumNumbers(array) / array.length;
 };
 const numbersArray = [2, 6, 9, 10, 7, 4, 1, 9];
-resultAvg = averageNumbers(numbersArrays);
+resultAvg = averageNumbers(numbersArray);
 console.log(resultAvg); 
 
 // Level 2: Array of strings
@@ -150,7 +151,7 @@ const wordsCount = [
 ];
 let wordToSearch = "machine";
 
-let searchWord = howManyTimes(wordsCount, ordToSearch);
+let searchWord = howManyTimes(wordsCount, wordToSearch);
 console.log(searchWord);
 
 // Iteration #8: Bonus
