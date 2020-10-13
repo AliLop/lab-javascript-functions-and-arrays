@@ -45,24 +45,48 @@ result = sumNumbers(numbers);
 console.log(result); 
 
 // Iteration #4: Calculate the average
+// Level 1: Array of numbers
 function averageNumbers(array) {
     if(array.length === 0) {  // 
         return null;
     }
     return sumNumbers(array) / array.length;
 };
-
-resultAvg = averageNumbers(numbers);
+const numbersArray = [2, 6, 9, 10, 7, 4, 1, 9];
+resultAvg = averageNumbers(numbersArrays);
 console.log(resultAvg); 
 
-// Level 1: Array of numbers
-const numbersArray = [2, 6, 9, 10, 7, 4, 1, 9];
-
 // Level 2: Array of strings
-const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
+function averageWordLength(array) {
+  if (array.length === 0) {
+      return null;
+  }
+  let sum = 0;
+  for (let i = 0; i<array.length; i++) {
+        sum = sum + array[i].length;
+    }
+    return sum / array.length;
+}
+
+const wordsArray = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
+let avgLenght = averageWordLength(wordsArray);
+console.log(avgLenght);
 
 // Iteration #5: Unique arrays
-const wordsUnique = [
+function uniquifyArray(array) {
+  let cleanArray= [];
+  if(array.length === 0){
+    return null;
+  } 
+  for (let i=0; i<array.length; i++) {
+  if(cleanArray.indexOf(array[i]) === -1){
+        cleanArray.push(array[i]);
+  }
+  }
+ return cleanArray
+};
+
+const wordsUniq = [
   'crab',
   'poison',
   'contagious',
@@ -75,11 +99,39 @@ const wordsUnique = [
   'simple',
   'bring'
 ];
+let uniquify = uniquifyArray(wordsUniq);
+console.log(uniquify);
 
 // Iteration #6: Find elements
+function doesWordExist(array, value) {
+  if(array.length === 0){
+    return null;
+  }
+  for(let i = 0; i < array.length; i++){
+    if (array[i] === value){
+      return true;
+    }
+  }
+  return false;
+};
+
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
+let search = "machine";
+
+let wordSearch = doesWordExist(wordsFind, search);
+console.log(wordSearch);
 
 // Iteration #7: Count repetition
+function howManyTimes(array, value) {
+  let wordCount = 0;
+  for(i=0; i < array.length;i++){
+    if(array[i] == value){
+      wordCount++
+    }
+  }
+    return wordCount
+}; 
+
 const wordsCount = [
   'machine',
   'matter',
@@ -93,6 +145,10 @@ const wordsCount = [
   'disobedience',
   'matter'
 ];
+let wordToSearch = "machine";
+
+let searchWord = howManyTimes(wordsCount, ordToSearch);
+console.log(searchWord);
 
 // Iteration #8: Bonus
 
